@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(455deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite; 
+    margin: 0;
+    padding: 0;
+}
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    background-color: #18181a;
+    color: #fff;
+    padding: 1px ;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    box-shadow: 0 2px 8px rgba(86, 20, 144, 0.3);
+
+}
+
+#game-container, #game {
+    margin: 0 auto;
+    max-width: 520px;
+    background: linear-gradient(135deg, #0f2027, #2c5364, #ff512f, #dd2476, #1fa2ff, #12d8fa, #a6ffcb);
+    background-size: 400% 400%;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.4);
+    padding: 24px 0 32px 0;
+    animation: gradientBG 8s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+#grid {
+    display: grid;
+    grid-template: repeat(10, 50px) / repeat(10, 50px);
+    gap: 2px;
+    background-color: #232526;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.cell {
+    background-color: #26272b;
+    border: 1px solid #444;
+    cursor: pointer;
+    font-size: 38px;
+    line-height: 50px;
+    text-align: centre;
+    user-select: none;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.cell:hover {
+    box-shadow: 0 0 8px 2px #ffef5c;
+    background-color: #35363a;
+}
+
+.vampire {
+    background-color: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); 
+}
+
+.werewolf {
+    background-color: linear-gradient(135deg, #7f53ac 0%, #647dee 100%); 
+}
+
+.ghost {
+   background-color:linear-gradient(135deg, #ff5858 0%, #f09819 100%); 
+}
+
+#controls {
+    margin: 24px 0 10px 0;
+}
+
+button, select, input {
+    padding: 12px 18px;
+    margin: 0 8px 8px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+button, select {
+    background: linear-gradient(90deg, #ffef5c 0%, #f7971e 100%);
+    color: #222;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255,239,92,0.15);
+    cursor: pointer;
+}
+
+button:hover, select:hover {
+    background: linear-gradient(90deg, #f7971e 0%, #ff5858 100%);
+    color: #fff;
+}
+
+input {
+    background: #2c2c34;
+    color: #fff;
+    border: 1px solid #444;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+button.hidden {
+    display: none;
+}
+
+input {
+    width: 150px;
+}
+
+p#message {
+    color: #ff5858;
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 4px #000;
+}

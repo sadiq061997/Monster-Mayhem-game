@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Mayhem</title>
+    <!-- Link external stylesheet for styling the game interface -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!--Header Section-->
+    <header>
+    <!-- Main heading with emoji for visual appeal -->
+    <h1>👾 Monster Mayhem 🎮 </h1>
+</header>
+<!-- Welcome Message -->
+
+    <!-- Container for the game interface -->
+    <div id="game-container">
+        <!-- Placeholder for the game grid, dynamically populated by JavaScript -->
+        <div id="grid"></div>
+        <!-- Container for game controls -->
+        <div id="controls">
+            <!-- Input for entering game ID to join or create a game -->
+            <input id="game-id" type="text" placeholder="Enter Game ID">
+            <!-- Button to trigger joining or creating a game -->
+            <button id="join-game">Join/Create Game</button>
+            <!-- Dropdown to select monster type (Vampire, Werewolf, Ghost) -->
+            <select id="monster-type">
+                <option value="vampire">Vampire 🧛</option>
+                <option value="werewolf">Werewolf 🐺</option>
+                <option value="ghost">Ghost 👻</option>
+            </select>
+            <!-- Button to end player's turn, hidden by default -->
+            <button id="end-turn" class="hidden">End Turn</button>
+            <!-- Container for movement controls, hidden until needed -->
+            <div id="move-controls" class="hidden">
+                <!-- Directional movement buttons -->
+                <button id="move-up">Up</button>
+                <button id="move-down">Down</button>
+                <button id="move-left">Left</button>
+                <button id="move-right">Right</button>
+                <!-- Input for specific coordinates to move to -->
+                <input id="move-coordinates" type="text" placeholder="Enter row,col (e.g., 8,1)">
+                <!-- Button to confirm movement to specified coordinates -->
+                <button id="move-to">Move To</button>
+            </div>
+            <!-- Message area for game status or instructions -->
+            <p id="message">Enter a game ID and click "Join/Create Game" to start!</p>
+        </div>
+        <!-- Container for displaying player statistics -->
+        <div id="stats">
+            <!-- Display total games played -->
+            <p>Games Played: <span id="total-games">0</span></p>
+            <!-- Display wins and losses -->
+            <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span></p>
+        </div>
+    </div>
+    <!-- Include Socket.IO library for real-time communication -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Include game logic script -->
+    <script src="/game.js"></script>
+</body>
+</html>
